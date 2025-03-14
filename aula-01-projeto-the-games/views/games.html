@@ -11,12 +11,16 @@
     <h1>Bem vindo à página de games</h1>
     <hr>
     <p>Game mais jogado no momento:</p>
-    <ul>
-        <li>Título: {{titulo}}</li>
-        <li>Ano: {{ano}}</li>
-        <li>Categoria: {{categoria}}</li>
-    </ul>
-    <p>O jogo {{jogo}} tem {{2025-ano}} anos.</p>
+    
+    {% for chave, valor in game.items() %}
+    <details>
+        <summary>{{chave}}</summary>
+        <p>{{valor}}</p>
+    </details>
+
+    {% endfor %}
+
+    <p>O jogo {{game['Título']}} tem {{2025-game['Ano']}} anos.</p>
     <hr>
     <p>Jogadores online no momento:</p>
     <ol>

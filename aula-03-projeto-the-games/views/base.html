@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>The games</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center;">The games</h1>
+        <hr>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+    <footer>
+        <hr>
+        <p style="text-align:center;">Todos os direitos reservados. &reg;</p>
+    </footer>    
+</body>
+</html>

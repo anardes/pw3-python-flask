@@ -11,15 +11,14 @@ def home():
 @app.route('/games')
 #criando função no python
 def games():
-    titulo='CS-GO'
-    ano=2012
-    categoria='FPS Online'
+    game = {'Título' :'CS-GO',
+            'Ano': 2012,
+            'Categoria' : 'FPS online'
+            }
     jogadores=['iruah', 'davi_lambari', 'edsongf1', 'kioto', 'jujudopix']
     jogos=['subway surfers', 'free fire', 'fortnite', 'cyberpunk', 'pou', 'my talking tom', 'plant vs zombie']
     return render_template('games.html',
-                           titulo=titulo,
-                           ano=ano,
-                           categoria=categoria,
+                           game = game,
                            jogadores=jogadores,
                            jogos=jogos)
 
